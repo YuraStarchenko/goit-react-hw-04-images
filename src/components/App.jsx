@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { React, useState, useEffect } from 'react';
 import { SearchBar } from './Searchbar/Searchbar';
 import { GlobalStyle } from '../GlobalStyle';
 import { ImageGallery } from './ImageGallery/ImageGallery';
@@ -28,7 +28,7 @@ export const App = () => {
   // для открытия модалки с картинкой
 
   const toggleModalImg = () => {
-    setShowModal(!showModal);
+    setShowModal(prevState => !prevState);
   };
 
   // сабмит инпута
@@ -61,7 +61,7 @@ export const App = () => {
         setLoadMore(12 - e.hits.length);
       })
       .catch(error => console.log(error));
-	}, [numberPage, query]);
+  }, [numberPage, query]);
 
   return (
     <Container>
