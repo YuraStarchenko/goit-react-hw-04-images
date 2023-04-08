@@ -28,7 +28,7 @@ export const App = () => {
   // для открытия модалки с картинкой
 
   const toggleModalImg = () => {
-    setShowModal(prevState => !prevState);
+    setShowModal(!showModal);
   };
 
   // сабмит инпута
