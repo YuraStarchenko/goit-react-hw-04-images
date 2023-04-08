@@ -19,7 +19,6 @@ export const SearchBar = ({ onSubmit }) => {
       return;
     }
 		onSubmit(inputValue);
-		setInputValue('');
   };
 
   return (
